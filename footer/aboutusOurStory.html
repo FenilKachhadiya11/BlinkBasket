@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="shortcut icon" type="x-icon" href="../logo.webp">
+    <title>About Us - Our Story</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0px auto;
+            padding: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .about-text {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 48%;
+        }
+
+        .about-text h2 {
+            color: #f39c12;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .about-image {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            width: 48%;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-section {
+            background-color: #f1c40f;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .mission-section h2 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .mission-section p {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .about-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .about-text,
+            .about-image {
+                width: 100%;
+            }
+
+            .about-text p {
+                font-size: 14px;
+            }
+
+            .mission-section h2 {
+                font-size: 20px;
+            }
+
+            .mission-section p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 22px;
+            }
+
+            .about-text h2 {
+                font-size: 20px;
+            }
+
+            .mission-section h2 {
+                font-size: 18px;
+            }
+
+            .about-text p {
+                font-size: 12px;
+            }
+        }
+
+        .c1 {
+            overflow-x: hidden;
+            animation: slideUp 2s ease-in-out;
+        }
+
+        .c2 {
+            overflow-x: hidden;
+            animation: slideUp 5s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .about-image {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48%;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-image {
+            position: relative;
+            width: 100%;
+            height: auto;
+            perspective: 1000px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+            backface-visibility: hidden;
+        }
+
+        .c1::after {
+            content: "";
+            background-image: url("../footerimg/our11.png");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transform: rotateY(-180deg);
+            opacity: 0;
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        }
+
+        .c1:hover::after {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+
+
+        /*.c1:hover img {
+            transform: rotateY(180deg);
+            opacity: 0;
+        }*/
+
+
+        .c2::after {
+            content: "";
+            background-image: url("../footerimg/our22.jpg");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transform: rotateY(-180deg);
+            opacity: 0;
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        }
+
+        .c2:hover::after {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+
+        /*.c2:hover img {
+            transform: rotateY(180deg);
+            opacity: 0;
+        }*/
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="../buyer.php" class="logo">BlinkBasket</a>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../buyer.php">Home</a></li>
+                    <li><a href="../buyer.php">Shop</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="aboutusOurStory.html">About Us</a></li>
+                    <li><a href="../addBlog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>About Us - Our Story</h1>
+
+        <div class="about-section">
+            <div class="about-text">
+                <h2>Our Journey</h2>
+                <p>Our story began with a simple idea: to provide top-quality products that elevate the everyday life of
+                    our customers. We started small, with a vision to create an online store that caters to a wide
+                    variety of products from electronics to home decor, fitness gear, and much more.</p>
+                <p>What started as a small e-commerce startup has grown into one of the most trusted names in online
+                    shopping. Our team is passionate about curating high-quality, affordable products that deliver on
+                    both style and function.</p>
+                <p>With a commitment to customer satisfaction and an eye for innovation, we continue to evolve to meet
+                    the needs of our diverse customer base. We aim to provide products that make your life easier, more
+                    enjoyable, and filled with inspiration.</p>
+            </div>
+            <div class="about-image c1">
+                <img src="../footerimg/our1.jfif" alt="Our Story Image">
+            </div>
+        </div>
+
+        <div class="mission-section">
+            <h2>Our Mission</h2>
+            <p>Our mission is to inspire customers by providing high-quality, reliable, and affordable products for
+                every part of their lives. We are dedicated to making your shopping experience easy, enjoyable, and
+                rewarding.</p>
+        </div>
+
+        <div class="about-section">
+            <div class="about-text">
+                <h2>Our Values</h2>
+                <p><strong>Customer-Centric:</strong> We put our customers first and strive to meet their needs with
+                    exceptional service and support.</p>
+                <p><strong>Quality:</strong> We ensure that every product we offer meets the highest standards of
+                    quality and durability.</p>
+                <p><strong>Innovation:</strong> We are always exploring new ways to improve our products, services, and
+                    shopping experience.</p>
+                <p><strong>Integrity:</strong> We believe in honesty, transparency, and building trust with our
+                    customers.</p>
+                <p><strong>Community:</strong> We are dedicated to giving back to the communities we serve and
+                    supporting causes that matter.</p>
+            </div>
+            <div class="about-image c2">
+                <img src="../footerimg/our2.png" alt="Our Values Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; <span id="year"></span> BlinkBasket. All Rights Reserved. | <a href="aboutusCarrers.html">Careers</a>
+        </p>
+    </div>
+    <footer>
+        <div class="cotainer">
+            <ul>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://twitter.com/">Twitter</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script>
+        // JavaScript to dynamically update the year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

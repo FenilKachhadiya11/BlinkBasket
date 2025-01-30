@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Blog - BlinkBasket</title>
+    <style>
+        /* Header Styling */
+        header {
+            background-color: #222;
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            margin-left: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        /* Blog Section */
+        .blog-container {
+            padding: 80px 20px 40px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .blog-container h2 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .blog-posts {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .blog-post {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 30%;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        /* Add hover effect with stronger shadow */
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+        }
+        
+        .blog-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-post-content {
+            padding: 20px;
+            position: relative;
+        }
+
+        .blog-post-content h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .blog-post-content p {
+            font-size: 16px;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .read-more {
+            display: none;
+            font-size: 14px;
+            color: #f39c12;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Show 'Read More' on hover */
+        .blog-post:hover .read-more {
+            display: block;
+        }
+
+        .blog-post:hover .blog-post-content p {
+            display: none;
+        }
+
+        /* General Styles */
+        html,
+        body {
+            height: 100%;
+            /* Ensure the body takes up the full height of the screen */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .c1 {
+            overflow-x: hidden;
+            animation: slideUp 2s ease-in-out;
+        }
+
+        .c2 {
+            overflow-x: hidden;
+            animation: slideUp 3s ease-in-out;
+        }
+
+        .c3 {
+            overflow-x: hidden;
+            animation: slideUp 4s ease-in-out;
+        }
+
+        .c4 {
+            overflow-x: hidden;
+            animation: slideUp 5s ease-in-out;
+        }
+
+        .c5 {
+            overflow-x: hidden;
+            animation: slideUp 6s ease-in-out;
+        }
+
+        .c6 {
+            overflow-x: hidden;
+            animation: slideUp 7s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer Animation */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            margin-top: 40px;
+            text-align: center;
+            animation: slideUp 1s ease-out;
+            /* Apply animation to the footer */
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            margin-left: 500px;
+        }
+
+        .social-links {
+            list-style: none;
+            padding: 0;
+            display: inline-block;
+            margin: 0;
+            margin-left: 500px;
+        }
+
+        .social-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .social-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .social-links li a:hover {
+            color: #f39c12;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <a href="buyer.php" class="logo">BlinkBasket</a>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="buyer.php">Home</a></li>
+                    <li><a href="buyer.php">Shop</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="footer/aboutusOurStory.html">About Us</a></li>
+                    <li><a href="addBlog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-container">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-posts">
+            <div class="blog-post c1">
+                <img src="footerimg/blog1.jpg" alt="Best Product Story">
+                <div class="blog-post-content">
+                    <h3>Why BlinkBasket is the Best Place to Shop</h3>
+                    <p>Discover how our platform is revolutionizing online shopping with amazing deals and premium
+                        products!</p>
+                    <a href="buyer.php" class="read-more">Thanks! for read </a>
+                </div>
+            </div>
+
+            <div class="blog-post c2">
+                <img src="footerimg/blog2.svg" alt="Customer Story">
+                <div class="blog-post-content">
+                    <h3>Customer Stories: How BlinkBasket Changed My Shopping Experience</h3>
+                    <p>Read inspiring stories from our customers and their experiences with BlinkBasket!</p>
+                    <a href="buyer.php" class="read-more">Thanks! for read </a>
+                </div>
+            </div>
+
+            <div class="blog-post c3">
+                <img src="footerimg/blog3.png" alt="Tips and Tricks">
+                <div class="blog-post-content">
+                    <h3>Top 5 Tips for a Seamless Shopping Experience</h3>
+                    <p>Enhance your shopping experience with these practical tips for navigating BlinkBasket.</p>
+                    <a href="buyer.php" class="read-more">Thanks! for read </a>
+                </div>
+            </div>
+
+            <div class="blog-post c4">
+                <img src="footerimg/blog4.jpg" alt="Seasonal Sales">
+                <div class="blog-post-content">
+                    <h3>Seasonal Sales You Can't Miss</h3>
+                    <p>Get ready for the best discounts and deals during our seasonal sales. Save big this season!</p>
+                    <a href="buyer.php" class="read-more">Thanks! for read </a>
+                </div>
+            </div>
+
+            <div class="blog-post c5">
+                <img src="footerimg/blog5.jpg" alt="New Product Launch">
+                <div class="blog-post-content">
+                    <h3>Introducing Our Latest Product Line</h3>
+                    <p>Explore the newest arrivals at BlinkBasket and stay ahead of the trends with our exciting product launch.</p>
+                    <a href="buyer.php" class="read-more">Thanks! for read </a>
+                </div>
+            </div>
+    
+            <div class="blog-post c6">
+                <img src="footerimg/blog6.jpg" alt="How to Make the Most of BlinkBasket">
+                <div class="blog-post-content">
+                    <h3>How to Make the Most of BlinkBasket</h3>
+                    <p>Maximize your shopping experience by following these tips and tricks for getting the best deals on BlinkBasket.</p>
+                    <a href="buyer.php" class="read-more">Thanks! for read </a>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <center>
+                <p>&copy; <span id="year"></span> BlinkBasket. All Rights Reserved.</p>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </center>
+
+        </div>
+    </footer>
+
+    <script>
+        // Update the year dynamically
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

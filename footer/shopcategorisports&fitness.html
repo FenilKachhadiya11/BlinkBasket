@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="shortcut icon" type="x-icon" href="../logo.webp">
+    <title>Shop Categories - Sports & Fitness</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed; /* Fixes the header */
+            top: 0; /* Aligns it to the top */
+            left: 0;
+            width: 100%; /* Ensures full-width coverage */
+            z-index: 1000; /* Places it above other elements */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-card img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .category-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #f39c12;
+        }
+
+        .category-card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .category-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #f39c12;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .category-card a:hover {
+            background-color: #e67e22;
+        }
+
+
+        .c1{
+            overflow-x: hidden;
+            animation: slideUp 1s ease-in-out;
+        }
+        .c2{
+            overflow-x: hidden;
+            animation: slideUp 1.5s ease-in-out;
+        }
+        .c3{
+            overflow-x: hidden;
+            animation: slideUp 2s ease-in-out;
+        }
+        .c4{
+            overflow-x: hidden;
+            animation: slideUp 2.5s ease-in-out;
+        }
+        .c5{
+            overflow-x: hidden;
+            animation: slideUp 3s ease-in-out;
+        }
+        .c6{
+            overflow-x: hidden;
+            animation: slideUp 3.5s ease-in-out;
+        }
+        .c7{
+            overflow-x: hidden;
+            animation: slideUp 4s ease-in-out;
+        }
+        .c8{
+            overflow-x: hidden;
+            animation: slideUp 4.5s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="../buyer.php" class="logo">BlinkBasket</a>
+        <div class="container1">
+            <nav>
+                <ul>
+                    <li><a href="../buyer.php">Home</a></li>
+                    <li><a href="../buyer.php">Shop</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="aboutusOurStory.html">About Us</a></li>
+                    <li><a href="../addBlog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Shop Categories - Sports & Fitness</h1>
+        <div class="categories">
+            <!-- Category 1: Fitness Equipment -->
+            <div class="category-card c1">
+                <img src="../footerimg/Shop Categories - Sports & Fitness for Fitness Equipment image.jpg" alt="Fitness Equipment">
+                <h3>Fitness Equipment</h3>
+                <p>Treadmills, dumbbells, and more for your home gym.</p>
+                <a href="../buyer.php">Shop Now</a>
+            </div>
+
+            <!-- Category 2: Activewear -->
+            <div class="category-card c2">
+                <img src="../footerimg/Shop Categories - Sports & Fitness for Activewear.jfif" alt="Activewear">
+                <h3>Activewear</h3>
+                <p>Comfortable and stylish workout clothing for men and women.</p>
+                <a href="../buyer.php">Shop Now</a>
+            </div>
+
+            <!-- Category 3: Sports Gear -->
+            <div class="category-card c3">
+                <img src="../footerimg/Shop Categories - Sports & Fitness for Sports Gear.jpg" alt="Sports Gear">
+                <h3>Sports Gear</h3>
+                <p>All the gear you need for your favorite sports activities.</p>
+                <a href="../buyer.php">Shop Now</a>
+            </div>
+
+            <!-- Category 4: Yoga & Pilates -->
+            <div class="category-card c4">
+                <img src="../footerimg/Shop Categories - Sports & Fitness for Yoga & Pilates.avif" alt="Yoga & Pilates">
+                <h3>Yoga & Pilates</h3>
+                <p>Yoga mats, resistance bands, and Pilates equipment.</p>
+                <a href="../buyer.php">Shop Now</a>
+            </div>
+
+            <!-- Category 5: Outdoor Sports -->
+            <div class="category-card c5">
+                <img src="../footerimg/Shop Categories - Sports & Fitness for Outdoor Sports.jpg" alt="Outdoor Sports">
+                <h3>Outdoor Sports</h3>
+                <p>Get the best outdoor sports equipment for your adventures.</p>
+                <a href="../buyer.php">Shop Now</a>
+            </div>
+
+            <!-- Category 6: Fitness Accessories -->
+            <div class="category-card c6">
+                <img src="../footerimg/Shop Categories - Sports & Fitness for Fitness Accessories.webp" alt="Fitness Accessories">
+                <h3>Fitness Accessories</h3>
+                <p>Fitness trackers, gloves, water bottles, and more.</p>
+                <a href="../buyer.php">Shop Now</a>
+            </div>
+
+            <!-- Category 7: Exercise Machines -->
+            <div class="category-card c7">
+                <img src="../footerimg/Shop Categories - Sports & Fitness for Exercise Machines.webp" alt="Exercise Machines">
+                <h3>Exercise Machines</h3>
+                <p>15-level auto-I=incline & massager.</p>
+                <a href="../buyer.php">Shop Now</a>
+            </div>
+
+            <!-- Category 8: Other Accessories -->
+            <div class="category-card c8">
+                <img src="../footerimg/Shop Categories - Sports & Fitness for Other Accessories.jfif" alt="Other Accessories">
+                <h3>Other Accessories</h3>
+                <p>Fitness trackers, gloves, water bottles, and more.</p>
+                <a href="../buyer.php">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container2">
+            <p>&copy;
+                <script>document.write(new Date().getFullYear());</script> BlinkBasket. All Rights Reserved.
+            </p>
+            <ul>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://twitter.com/">Twitter</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

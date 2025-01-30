@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="shortcut icon" type="x-icon" href="../logo.webp">
+    <title>Track Your Order</title>
+    <style>
+        html, body {
+            height: 100%; /* Ensure the body takes full height */
+            margin: 0; /* Remove default margin */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; /* Make the body a flex container */
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo {
+            font-size: 20px;
+            color: #f39c12;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        header nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        main {
+            flex: 1; /* Make the main content fill the available space */
+            padding-top: 80px; /* Adjust for fixed header */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f39c12;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e67e22;
+        }
+
+        .order-status {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-left: 5px solid #f39c12;
+            display: none;
+        }
+
+        .order-status p {
+            margin: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            color: #f39c12;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="../buyer.php" class="logo">BlinkBasket</a>
+        <nav>
+            <ul>
+                <li><a href="../buyer.php">Home</a></li>
+                <li><a href="../buyer.php">Shop</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+                <li><a href="aboutusOurStory.html">About Us</a></li>
+                <li><a href="../addBlog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1>Track Your Order</h1>
+            <p>Enter your order number and email address below to track the status of your order.</p>
+
+            <form id="trackOrderForm">
+                <input type="text" id="orderNumber" placeholder="Order Number" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <button type="submit">Track Order</button>
+            </form>
+
+            <div class="order-status" id="orderStatus">
+                <p><strong>Order Status:</strong> Your order is on the way! Estimated delivery: <span id="deliveryDate"></span>.</p>
+            </div>
+            <script>
+                // Get the current date
+                const currentDate = new Date();
+                
+                // Add 7 days to the current date
+                currentDate.setDate(currentDate.getDate() + 7);
+            
+                // Format the date to "Month Day, Year"
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                const deliveryDate = currentDate.toLocaleDateString('en-US', options);
+            
+                // Set the delivery date in the HTML
+                document.getElementById('deliveryDate').textContent = deliveryDate;
+            </script>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BlinkBasket. All Rights Reserved.</p>
+        <ul>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://twitter.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        const form = document.getElementById('trackOrderForm');
+        const orderStatus = document.getElementById('orderStatus');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            orderStatus.style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>

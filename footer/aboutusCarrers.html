@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="shortcut icon" type="x-icon" href="../logo.webp">
+    <title>About Us - Careers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .careers-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .careers-text {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .careers-text h2 {
+            color: #f39c12;
+            margin-bottom: 15px;
+        }
+
+        .careers-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .careers-image {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .careers-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .values-section {
+            background-color: #f1c40f;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .values-section h2 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .values-section p {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .job-listing {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+
+        .job-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .job-card h3 {
+            color: #f39c12;
+            font-size: 20px;
+        }
+
+        .job-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .apply-button {
+            padding: 10px 20px;
+            background-color: #f39c12;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .apply-button:hover {
+            background-color: #e67e22;
+        }
+
+        @media (max-width: 768px) {
+            .careers-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .careers-text,
+            .careers-image {
+                flex: 1 1 100%;
+            }
+
+            .careers-text p {
+                font-size: 14px;
+            }
+
+            .values-section h2 {
+                font-size: 20px;
+            }
+
+            .values-section p {
+                font-size: 16px;
+            }
+
+            .job-listing {
+                flex-direction: column;
+            }
+
+            .job-card {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .careers-text h2 {
+                font-size: 20px;
+            }
+
+            .values-section h2 {
+                font-size: 18px;
+            }
+        }
+
+
+        .c1{
+            overflow-x: hidden;
+            animation: slideUp 2s ease-in-out;
+        }
+        .c2{
+            overflow-x: hidden;
+            animation: slideUp 5s ease-in-out;
+        }
+        .c3{
+            overflow-x: hidden;
+            animation: slideUp 5.5s ease-in-out;
+        }
+        .c4{
+            overflow-x: hidden;
+            animation: slideUp 6s ease-in-out;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .careers-image {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .careers-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="../buyer.php" class="logo">BlinkBasket</a>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="../buyer.php">Home</a></li>
+                    <li><a href="../buyer.php">Shop</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="aboutusOurStory.html">About Us</a></li>
+                    <li><a href="../addBlog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>About Us - Careers</h1>
+
+        <div class="careers-section">
+            <div class="careers-text">
+                <h2>Join Our Team</h2>
+                <p>At BlinkBasket, we’re committed to building a diverse and talented team. Our people are at
+                    the heart of everything we do, and we believe in fostering a culture that encourages creativity,
+                    innovation, and collaboration. If you’re looking for a workplace that values your ideas and
+                    encourages growth, we might be the perfect fit for you.</p>
+                <p>We offer a dynamic work environment where you can make a difference, develop your skills, and grow
+                    your career. Our team is passionate about delivering top-notch products and services, and we are
+                    always on the lookout for individuals who are eager to contribute to our success.</p>
+            </div>
+            <div class="careers-image c1">
+                <img src="../footerimg/team.webp" alt="Career Team Image">
+            </div>
+        </div>
+
+        <div class="values-section">
+            <h2>Our Values</h2>
+            <p>We are driven by values that make us a better company and a better place to work. These values are at the
+                core of everything we do:</p>
+            <p><strong>Innovation:</strong> We thrive on fresh ideas and innovative solutions to stay ahead of the
+                market.</p>
+            <p><strong>Collaboration:</strong> Our team-oriented culture fosters collaboration, helping us achieve
+                collective success.</p>
+            <p><strong>Integrity:</strong> We act with transparency, honesty, and accountability in everything we do.
+            </p>
+            <p><strong>Growth:</strong> We are committed to developing our employees through ongoing training and
+                opportunities for advancement.</p>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-card c2">
+                <h3>Software Developer</h3>
+                <p>We are looking for a skilled software developer to join our tech team and help us build innovative
+                    solutions for our e-commerce platform.</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+
+            <div class="job-card c3">
+                <h3>Marketing Specialist</h3>
+                <p>Join our marketing team to help drive brand awareness, grow our online presence, and engage with our
+                    community of customers.</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+
+            <div class="job-card c4">
+                <h3>Customer Support Representative</h3>
+                <p>If you’re passionate about helping customers and have excellent communication skills, this is the
+                    role for you!</p>
+                <button class="apply-button">Apply Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; <span id="year"></span> BlinkBasket. All Rights Reserved. | <a
+                href="aboutusprivacypolicy.html">Privacy Policy</a></p>
+    </div>
+    <footer>
+        <div class="cotainer">
+            <ul>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://twitter.com/">Twitter</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
