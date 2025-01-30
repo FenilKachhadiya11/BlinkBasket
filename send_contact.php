@@ -1,9 +1,4 @@
 <?php
-// Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
-    header("Location: index.php");
-    exit();
-}
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
